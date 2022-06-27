@@ -12,14 +12,19 @@ struct Offer: View {
     var description = ""
     
     var body: some View {
-        VStack {
-            Text(title)
-                .padding()
-                .font(.title)
-                .background(Color("CardBackground"))
-            Text(description)
-                .padding()
-                .background(Color("CardBackground"))
+        ZStack {
+            Image("BackgroundPattern")
+                .frame(maxWidth: .infinity, maxHeight: 200)
+                .clipped()
+            VStack {
+                Text(title)
+                    .padding()
+                    .font(.title)
+                    .background(Color("CardBackground"))
+                Text(description)
+                    .padding()
+                    .background(Color("CardBackground"))
+            }
         }
     }
 }
@@ -27,6 +32,6 @@ struct Offer: View {
 struct Offer_Previews: PreviewProvider {
     static var previews: some View {
         Offer(title: "My offer", description: "this is the description")
-            .previewLayout(.fixed(width: 300, height: 200))
+            .previewLayout(.fixed(width: 300, height: 400))
     }
 }
