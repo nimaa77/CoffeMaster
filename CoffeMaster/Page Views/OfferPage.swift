@@ -15,8 +15,8 @@ struct OfferPage: View {
                 Offer(title: "Welcome Gift", description: "35% Off for first order, buy one take 2")
                 Offer(title: "Welcome Gift", description: "35% Off for first order, buy one take 2")
                 Offer(title: "Welcome Gift", description: "35% Off for first order, buy one take 2")
-            }
-        }.navigationTitle("Offers")
+            }.navigationTitle("Offers")
+        }
     }
 }
 

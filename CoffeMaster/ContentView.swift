@@ -8,22 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var name: String = ""
     var body: some View {
+        TabView {
+            MenuPage()
+                .tabItem() {
+                    Image(systemName: "cup.and.saucer")
+                    Text("Home")
+                }
             OfferPage()
+                .tabItem() {
+                    Image(systemName: "tag")
+                    Text("Offers")
+                }
+            OrdersPage()
+                .tabItem() {
+                    Image(systemName: "cart")
+                    Text("Order")
+                }
+            InfoPage()
+                .tabItem() {
+                    Image(systemName: "info")
+                    Text("Info")
+                }
+        }
     }
 }
-
-//struct Greeting: View {
-//    @Binding var name: String
-//
-//    var body: some View {
-//        HStack {
-//            TextField("Enter Your Name:", text: $name)
-//            Text("Hello \(name)")
-//        }
-//    }
-//}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
