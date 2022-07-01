@@ -9,8 +9,8 @@ import SwiftUI
 
 struct OrdersPage: View {
     
-    @State var name: String = ""
-    @State var phone: String = ""
+    @State private var name: String = ""
+    @State private  var phone: String = ""
     
     @EnvironmentObject var cartManager: CartManager
     
@@ -23,7 +23,7 @@ struct OrdersPage: View {
                         List {
                             Section("ITEMS") {
                                 ForEach(cartManager.cart, id:\.0.id) { item in
-                                    OrderItem()
+                                    OrderItem(item: (product: item.0, quanitity: item.1))
                                 }
                             }.listRowBackground(Color("Background"))
                                                 
