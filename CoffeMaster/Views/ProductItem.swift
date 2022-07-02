@@ -24,8 +24,10 @@ struct ProductItem: View {
                     Text("$ \(product.price, specifier: "%.2f")")
                         .font(.caption)
                     
-                }.padding(8)
+                }
+                .padding(8)
                 Spacer()
+                LikeButton(product: product)
             }
         }
         .background(Color("SurfaceBackground"))
@@ -37,5 +39,6 @@ struct ProductItem: View {
 struct ProductItem_Previews: PreviewProvider {
     static var previews: some View {
         ProductItem(product: Product(id: 1, name: "Dummy Product", description: "This is the description", price: 1.25, image: ""))
+            .environmentObject(LikeManager())
     }
 }

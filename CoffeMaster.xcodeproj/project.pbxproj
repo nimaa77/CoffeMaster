@@ -19,6 +19,8 @@
 		3C539ABE286F7B62008A28F3 /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C539ABD286F7B62008A28F3 /* CartManager.swift */; };
 		3C539AC0286F8255008A28F3 /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C539ABF286F8255008A28F3 /* OrderItem.swift */; };
 		3C539AC3286F84F4008A28F3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3C539AC2286F84F4008A28F3 /* Alamofire */; };
+		3C539AC62870E52A008A28F3 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C539AC52870E52A008A28F3 /* LikeButton.swift */; };
+		3C539AC92870E615008A28F3 /* LinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C539AC82870E615008A28F3 /* LinkManager.swift */; };
 		3C5D7FF1286738810014F9C9 /* CoffeMasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D7FF0286738810014F9C9 /* CoffeMasterApp.swift */; };
 		3C5D7FF3286738810014F9C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D7FF2286738810014F9C9 /* ContentView.swift */; };
 		3C5D7FF5286738840014F9C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C5D7FF4286738840014F9C9 /* Assets.xcassets */; };
@@ -39,6 +41,8 @@
 		3C539ABD286F7B62008A28F3 /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 		3C539ABF286F8255008A28F3 /* OrderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
 		3C539AC42870539C008A28F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3C539AC52870E52A008A28F3 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
+		3C539AC82870E615008A28F3 /* LinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkManager.swift; sourceTree = "<group>"; };
 		3C5D7FED286738810014F9C9 /* CoffeMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5D7FF0286738810014F9C9 /* CoffeMasterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeMasterApp.swift; sourceTree = "<group>"; };
 		3C5D7FF2286738810014F9C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 				3C32C94128699952009DD7E9 /* Offer.swift */,
 				3C2EE406286F6E1C0084F64D /* ProductItem.swift */,
 				3C539ABF286F8255008A28F3 /* OrderItem.swift */,
+				3C539AC52870E52A008A28F3 /* LikeButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -84,6 +89,7 @@
 		3C539AB6286F78D8008A28F3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3C539AC82870E615008A28F3 /* LinkManager.swift */,
 				3C539AB7286F78EB008A28F3 /* Category.swift */,
 				3C539AB9286F78FC008A28F3 /* Product.swift */,
 				3C539ABB286F7B4D008A28F3 /* MenuManager.swift */,
@@ -212,6 +218,7 @@
 				3C32C94228699952009DD7E9 /* Offer.swift in Sources */,
 				3C539AB8286F78EB008A28F3 /* Category.swift in Sources */,
 				3CD4E9532869FFE5002C8FD9 /* OfferPage.swift in Sources */,
+				3C539AC92870E615008A28F3 /* LinkManager.swift in Sources */,
 				3C2EE401286F6D1D0084F64D /* MenuPage.swift in Sources */,
 				3C2EE409286F75570084F64D /* DetailsPage.swift in Sources */,
 				3C539ABA286F78FC008A28F3 /* Product.swift in Sources */,
@@ -220,6 +227,7 @@
 				3C2EE407286F6E1C0084F64D /* ProductItem.swift in Sources */,
 				3C5D7FF3286738810014F9C9 /* ContentView.swift in Sources */,
 				3C2EE403286F6D240084F64D /* OrdersPage.swift in Sources */,
+				3C539AC62870E52A008A28F3 /* LikeButton.swift in Sources */,
 				3C5D7FF1286738810014F9C9 /* CoffeMasterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,9 +354,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CoffeMaster/Preview Content\"";
+				DEVELOPMENT_TEAM = 8J98293C4X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoffeMaster/Info.plist;
@@ -363,6 +373,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ir.nima.CoffeMaster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -374,9 +385,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CoffeMaster/Preview Content\"";
+				DEVELOPMENT_TEAM = 8J98293C4X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoffeMaster/Info.plist;
@@ -391,6 +404,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ir.nima.CoffeMaster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

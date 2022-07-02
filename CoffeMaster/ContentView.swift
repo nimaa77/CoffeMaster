@@ -41,6 +41,9 @@ struct ContentView_Previews: PreviewProvider {
         Group {
             ContentView()
                 .environmentObject(CartManager())
+                .environmentObject(MenuManager())
+                .environmentObject(LikeManager()) 
+            
         }
     }
 }

@@ -54,6 +54,9 @@ struct DetailsPage: View {
 
         }
         .navigationTitle("Dummy")
+        .toolbar {
+            LikeButton(product: product)
+        }
     }
 }
 
@@ -61,5 +64,6 @@ struct DetailsPage_Previews: PreviewProvider {
     static var previews: some View {
         DetailsPage(product: Product(id: 1, name: "Dummy Product", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", price: 1.25, image: ""))
             .environmentObject(CartManager())
+            .environmentObject(LikeManager())
     }
 }

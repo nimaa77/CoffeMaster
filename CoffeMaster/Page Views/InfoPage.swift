@@ -40,7 +40,12 @@ struct WebView: UIViewRepresentable {
 
 struct InfoPage: View {
     var body: some View {
-        WebView()
+        HStack {
+            WebView()
+            Button("click") {
+                
+            }
+        }
     }
 }
 

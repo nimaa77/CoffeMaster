@@ -11,11 +11,13 @@ import SwiftUI
 struct CoffeMasterApp: App {
     var menuManager = MenuManager()
     var cartManager = CartManager()
+    var likeManager = LikeManager()
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(menuManager)
                 .environmentObject(cartManager)
+                .environmentObject(likeManager)
         }
     }
 }

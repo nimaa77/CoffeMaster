@@ -13,4 +13,11 @@ struct Category: Decodable, Identifiable {
     var id: String {
         return self.name
     }
+    
+    func filteredItems(_ text: String) -> [Product] {
+        if text.count > 0 {
+            return products.filter({ $0.name.contains(text) })
+        }
+        return products
+    }
 }
