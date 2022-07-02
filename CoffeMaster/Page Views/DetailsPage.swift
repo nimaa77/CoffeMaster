@@ -9,8 +9,11 @@ import SwiftUI
 
 struct DetailsPage: View {
     
-    @State private var quantity = 1
+    @Environment(\.dismiss) var dismiss
     @EnvironmentObject var cartManager: CartManager
+    
+    @State private var quantity = 1
+    
     var product: Product
     
     var body: some View {
@@ -41,6 +44,7 @@ struct DetailsPage: View {
             
             Button("Add \(quantity) to Cart") {
                 cartManager.add(product: product, quantity: quantity)
+                dismiss()
             }
                 .padding()
                 .frame(width: 250.0)

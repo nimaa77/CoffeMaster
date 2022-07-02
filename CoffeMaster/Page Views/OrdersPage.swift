@@ -43,9 +43,9 @@ struct OrdersPage: View {
                                 HStack {
                                     Spacer()
                                     Text("Total")
-//                                    Spacer()
-//                                    Text("$ \(cartManager.total(), specifier: "%.2f")")
-//                                        .bold()
+                                    Spacer()
+                                    Text("$ \(cartManager.total(), specifier: "%.2f")")
+                                        .bold()
                                     Spacer()
                                 }
                             }.listRowBackground(Color.clear)
